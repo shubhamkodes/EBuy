@@ -1,4 +1,9 @@
 package com.itsthetom.ebuy.model
 
-class Product {
-}
+data class Product (
+    val productId:Int,
+    val productName:String,
+    val productQty:String,
+    val productPrice:String,
+    val imageUrl:Int
+)

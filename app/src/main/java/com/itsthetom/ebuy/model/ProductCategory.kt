@@ -1,4 +1,10 @@
 package com.itsthetom.ebuy.model
 
-class ProductCategory {
-}
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+data class ProductCategory(
+    val productId:Int,
+    val categoryName:String
+):Parcelable

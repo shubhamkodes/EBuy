@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">EBuy</string>
-    <string name="fragrance">Fragrance</string>
+    <string name="fragrance">Skin</string>
     <string name="body">Body</string>
     <string name="face">Face</string>
+    <string name="hair">Hair</string>
+    <string name="let_s_find_your_favourite_body_care_product">Let\'s find your favourite body care product</string>
+    <string name="your_cart_is_emtpy">Your Cart is empty</string>
+    <string name="a_moisturizing_body_with_a_sweet_and_refreshing_aroma_of_japnese_cherry_blosso_peony_musk_and_strawberry_will_make_the_skin_feel_moist_and_smooth_the_combination_also_makes_long_lasting_fragrance">A moisturizing body with a sweet and refreshing aroma of Japnese cherry blosso, peony, musk, and strawberry. Will make the skin feel moist and smooth. The combination also makes long-lasting fragrance.</string>
 </resources>

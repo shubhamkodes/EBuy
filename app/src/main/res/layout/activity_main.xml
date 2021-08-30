@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sideNavBar"
         android:layout_width="80dp"
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#f5f5f5"
         >
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvFragrance"
+            android:id="@+id/tvMakeup"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:clickable="true"
@@ -71,7 +73,7 @@
             android:fontFamily="@font/rubik_medium"
             android:gravity="center"
             android:rotation="270"
-            android:text="Hair"
+            android:text="@string/hair"
             android:textColor="@color/gray_dark"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@id/btnSearch"
@@ -81,7 +83,7 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/btnSearch"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -90,4 +92,102 @@
             app:srcCompat="@drawable/ic_search"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:text="Hello, Shubham"
+        android:fontFamily="@font/rubik_bold"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        />
+    <TextView
+        android:id="@+id/tvSubHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tvHello"
+        app:layout_constraintTop_toBottomOf="@id/tvHello"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/rubik"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:text="@string/let_s_find_your_favourite_body_care_product"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:srcCompat="@drawable/profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvHello"
+        android:layout_marginEnd="32dp"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_filter"
+        app:layout_constraintStart_toEndOf="@id/sideNavBar"
+        app:layout_constraintTop_toBottomOf="@id/tvSubHeading"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/ivFilter"
+        app:layout_constraintTop_toTopOf="@id/ivFilter"
+        app:layout_constraintBottom_toBottomOf="@id/ivFilter"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:overScrollMode="never"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_product_category"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProducts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ivFilter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivFilter"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        tools:listitem="@layout/item_product"
+        android:overScrollMode="never"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCart"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sideNavBar"
+        android:text="@string/your_cart_is_emtpy"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:drawableEnd="@drawable/ic_cart"
+        android:paddingEnd="24dp"
+        android:padding="8dp"
+        android:includeFontPadding="false"
+        android:background="@drawable/cart_button_bg"
+        android:backgroundTint="#42995C"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="32dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/rubik_bold"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

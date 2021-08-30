@@ -1,6 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProdImg"
+        android:layout_width="250dp"
+        android:layout_height="500dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/prod2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:transitionName="image"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_heart" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProdName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/rubik_bold"
+        android:text="Japanese Cherry Blossom"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView" />
+
+    <TextView
+        android:id="@+id/lableSize"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Size"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/labelPrize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvSize"
+        android:fontFamily="@font/rubik_medium"
+        />
+
+    <TextView
+        android:id="@+id/labelPrize"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="4dp"
+        android:text="Price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lableSize"
+        app:layout_constraintBottom_toTopOf="@id/tvPrice"
+        android:fontFamily="@font/rubik_medium"
+        />
+
+    <TextView
+        android:id="@+id/tvSize"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="250ml"
+        android:textSize="17sp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="@id/lableSize"
+        app:layout_constraintStart_toStartOf="@id/lableSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/rubik_bold"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="$ 15.00"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@id/labelPrize"
+        app:layout_constraintStart_toStartOf="@id/labelPrize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/rubik_bold"
+        android:textColor="#42995C"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

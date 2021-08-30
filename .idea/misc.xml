@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/EBuy/app/src/main/res/drawable/cart_button_bg.xml" value="0.27291666666666664" />
         <entry key="..\:/Android/EBuy/app/src/main/res/drawable/ic_cat_bg.xml" value="0.2916666666666667" />
         <entry key="..\:/Android/EBuy/app/src/main/res/drawable/ic_search.xml" value="0.2916666666666667" />
-        <entry key="..\:/Android/EBuy/app/src/main/res/layout/activity_main.xml" value="0.26145833333333335" />
+        <entry key="..\:/Android/EBuy/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Android/EBuy/app/src/main/res/layout/activity_product_detail.xml" value="0.2" />
+        <entry key="..\:/Android/EBuy/app/src/main/res/layout/item_product.xml" value="0.4" />
+        <entry key="..\:/Android/EBuy/app/src/main/res/layout/item_product_category.xml" value="0.4" />
       </map>
     </option>
   </component>
